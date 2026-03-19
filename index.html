@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forschungsergebnisse</title>
+    
+    <!-- Pico CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+    
+    <!-- SimpleLightbox CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simplelightbox/2.14.2/simple-lightbox.min.css">
+</head>
+<body>
+    <main class="container">
+        <h1>Nature Communications Revision</h1>
+        <h2>1 Netzwerke</h2>
+        <article>
+            <hgroup>
+                <h4>Wasser vs. tCr</h4>
+                <p>Netzwerke aus den Aachener Daten mit unserem ursprünglichen Metaboliten Set. </p>
+            </hgroup>
+            
+            <p>Kein Vorzeichen verändert sich (von positiver zu negativer Korrelation). Die meisten Verbindungen bleiben gleich. 
+                Die Verbindung von NAA zu Gln ist in tCr negativ (-0.1) und in der Wasser-Referenz deutlich stärker negativ (-0.28).
+            </p>
+            <div class="grid">
+                <div >
+                    <h4 style="text-align: center;"> Wasser </h4>
+                    <a href="results/v1/wasser-relax.svg"><img src="results/v1/wasser-relax.svg" alt="Ergebnis 1"></a>
+                </div>      
+                <div >
+                    <h4 style="text-align: center;"> tCr </h4>                    
+                    <a href="results/v1/tCr.svg"><img src="results/v1/tCr.svg" alt="Ergebnis 2"></a>
+                </div>
+                          
+            </div>            
+        </article>
+        <article>            
+            <hgroup>
+                <h4>Einfluss von GM</h4>
+                <p>Netzwerke aus den Aachener Daten mit unserem ursprünglichen Metaboliten Set. </p>
+            </hgroup>            
+            
+            <p>Auch hier stabil. Die Verbindung von NAA zu Gln jetzt circa -0.2 verglichen zu -0.28 in unkorrigiert und -0.1 in tCr. 
+            </p>
+            <div class="grid">
+                <div >
+                    <h4 style="text-align: center;"> Wasser </h4>                    
+                    <a href="results/v1/wasser-relax.svg" class="gallery"><img src="results/v1/wasser-relax.svg" alt="Ergebnis 1"></a>
+                </div>
+                <div >
+                    <h4 style="text-align: center;"> Wasser (gm-korrigiert) </h4>
+                    <a href="results/v1/wasser-relax-gm.svg" class="gallery"><img src="results/v1/wasser-relax-gm.svg" alt="Ergebnis 1"></a>
+                </div>                
+            </div>
+        </article>
+        
+        <h2>2 Metabolite Ratios</h2>
+        <article>
+             <h4>Original Metaboliten Set</h4>
+             <ul>
+                <li>Übersicht der Ratios aus Wasser vs. tCr referenzierte Werte für Aachen und Jena </li>
+                <li>tCr-relax bedeutet natürlich eigentlich nur tCr, das ist nur eine Referenz von mir aus welcher Exceltabelle die Daten kommen.</li>
+                <li>Da die Unterschiede so gering waren habe ich die 3. Nachkomma stelle eingeblendet um das besser beurteilen zu können. Fürs Paper würde ich die wahrscheinlich wiedere rausnehmen. </li>                
+            </ul>
+            
+            <div >                
+                <a href="results/v1/heatmaps_V1.svg"><img src="results/v1/heatmaps_V1.svg" alt="Ergebnis 1"></a>
+            </div>              
+        </article>
+    </main>
+
+    <!-- SimpleLightbox JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/simplelightbox/2.14.2/simple-lightbox.min.js"></script>    
+    <script>    
+        new SimpleLightbox('.gallery', {/* Optionen */});
+    </script>
+</body>
+</html>
