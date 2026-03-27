@@ -33,83 +33,16 @@
 <body>
     <main class="container">
         <h1>Nature Communications Revision</h1>
-        
-        <h2>1 Netzwerke</h2>
-        <article>
-            <hgroup>
-                <h4>Wasser vs. tCr</h4>
-                <p>Netzwerke aus den Aachener Daten mit unserem ursprünglichen Metaboliten Set. </p>
-            </hgroup>
             
-            <p>Kein Vorzeichen verändert sich (von positiver zu negativer Korrelation). Die meisten Verbindungen bleiben von der Stärke ähnlich. 
-                Die Verbindung von NAA zu Gln ist in tCr negativ (-0.1) und in der Wasser-Referenz deutlich stärker negativ (-0.28).
-            </p>
-            <div class="grid">
-                <div >
-                    <h5> Wasser </h5>
-                    <a href="results/v1/wasser-relax.svg"><img src="results/v1/wasser-relax.svg" alt="Ergebnis 1"></a>
-                </div>      
-                <div >
-                    <h5> tCr </h5>                    
-                    <a href="results/v1/tCr.svg"><img src="results/v1/tCr.svg" alt="Ergebnis 2"></a>
-                </div>
-                          
-            </div>            
-        </article>
-        <article>            
-            <hgroup>
-                <h4>Einfluss von GM</h4>
-                <p>Netzwerke aus den Aachener Daten mit unserem ursprünglichen Metaboliten Set. </p>
-            </hgroup>            
-            
-            <ul>                               
-               <li>Der Vergleich Wasser vs. für Wasser für GM korrigiert ist auch hier stabil. </li>
-               <li>Die Werte der stärksten Verbindungen sind insgesamt harmonischer da die Korrelation zwischen GABA und Glu auf das Level der anderen runtergeht und nicht mehr so heraussticht (0.49->0.37). </li>
-               <li>Die Verbindung von NAA zu Gln jetzt circa -0.2 verglichen zu -0.28 in unkorrigiert und -0.1 in tCr. </li>                           
-            </ul>
-            <div class="grid">
-                <div >
-                    <h5> Wasser </h5>                    
-                    <a href="results/v1/wasser-relax.svg" class="gallery"><img src="results/v1/wasser-relax.svg" alt="Ergebnis 1"></a>
-                </div>
-                <div >
-                    <h5> Wasser (gm-korrigiert) </h5>
-                    <a href="results/v1/wasser-relax-gm.svg" class="gallery"><img src="results/v1/wasser-relax-gm.svg" alt="Ergebnis 1"></a>
-                </div>                
-            </div>
-        </article>
-        
-        <h2>2 Metabolite Ratios</h2>
-        <article>
-             <h4>Original Metaboliten Set</h4>
-             <ul>
-                <li>Übersicht der Ratios aus Wasser vs. tCr referenzierte Werte für Aachen und Jena </li>
-                <li>tCr-relax bedeutet natürlich eigentlich nur tCr, das ist nur eine Referenz von mir aus welcher Exceltabelle die Daten kommen.</li>
-                <li>Da die Unterschiede so gering waren habe ich die 3. Nachkomma stelle eingeblendet um das besser beurteilen zu können. Fürs Paper würde ich die wahrscheinlich wiedere rausnehmen. </li>                
-            </ul>
-            
-            <div >                
-                <a href="results/v1/heatmaps_V1.svg"><img src="results/v1/heatmaps_V1.svg" alt="Ergebnis 1"></a>
-            </div>              
-        </article>
 
-        <h2>3 Metaboliten Auswahl</h2>
+
+        <h2>1 Metaboliten Auswahl</h2>
         <article>
             <hgroup>
                 <h4>Welches Metaboliten in die Analysen aufnehmen?</h4>
                 <p>Usprüngliches Set war inspiriert aus dem Hintergrund der Fasting-Studie (7T Validation aus Jena) </p>
             </hgroup>
 
-
-            <div class="mt">
-                <h6>N/A</h6>
-                <p>Folgende Metabolite sind in mehr als 30% der Fälle nicht quantifizierbar oder haben die Qualitätskontrolle nicht überlebt:</p>
-                <ul>
-                    <li>Aachen: PCh, Glc, Asc, sI</li>
-                    <li>Jena: Glc, Asc, </li>
-                </ul>  
-            </div>     
-            
              <div > 
                 <h6>Korrelationsmatrix Aachen (nach QC)</h6>         
                 <a href="results/aachen_correlations.png"><img src="results/aachen_correlations.png" alt="Ergebnis 1"></a>
@@ -122,8 +55,7 @@
                     <li><p><strong>TIER 1 - Reliable:</strong> NAA, tCr, Glu, Ins, tCho, tNAA</p></li>
                     <li><p><strong>TIER 2 - Moderate:</strong> Gln, NAAG, GSH, Tau, sI, Asp</p></li>
                     <li><p><strong>TIER 3 - Critical:</strong> PCh, GPC, GABA, Lac</p></li>
-                    <li><p></p><strong>TIER 4 - Advanced:</strong> Ala, Asc, PE, Glc</p></li>            
-                    <li><p></p><strong>Original Metaboliten Set:</strong> NAA, Ins, GPC, Glu, Gln, GABA, Lac, Asp, GSH</p></li>
+                    <li><p></p><strong>TIER 4 - Advanced:</strong> Ala, Asc, PE, Glc</p></li>                                
                 </ul>
             </div>
             
@@ -131,26 +63,76 @@
                 <h6>Vorschlag für ein neues Metaboliten Set</h6>
                 <ul>
                     <li>Alle Metaboliten aus Tier 1-3 </li>
-                    <li>Außer die bei denen zuviele N/As waren (Glc, Asc, PCh, sI) </li>
-                    <li>NAA und NAAG können einzeln bleiben da Korrelation niedrig</li>
-                    <li>PCh + GPC zusammenfassen als tCho da PCh problematisch in Aachen </li>
+                    <li>Außer die bei denen zuviele N/As waren (Aachen: Glc, Asc, PCh, sI, Jena: Glc, Asc)</li>                    
                     <li>Cr+PCr zusammenfassen da hochkorreliert</li>
+                    <li>PCh + GPC zusammenfassen als tCho da PCh problematisch in Aachen </li>
+                    <li>NAA und NAAG können einzeln bleiben da Korrelation niedrig</li>                                        
                 </ul>
             </div>
             
             <h6>Neues Metaboliten Set: NAA, tCr, Glu, Ins, tCho, Gln, NAAG, GSH, Tau, Asp, GABA, Lac</h6>                        
-            
-            <div class="mt">
-                <hgroup>
-                    <h4>Analyse Strategie</h4>
-                    <p>(Vorschlag) </p>
-                </hgroup>
-                <ul>
-                    <li>Wir nehmen das erweiterte Metaboliten Set ins Paper</li>
-                    <li>Wir packen Metabolit Ratio Plots von Tier 1 bis Tier 3 in die Supplementary Materials um zu demonstrieren, dass es robust ist.</li>
-                </ul>                                
-            </div>
+            <h6>Orig. Metaboliten Set: NAA, Ins, GPC, Glu, Gln,   GSH,  Asp, GABA, Lac</h6>
+ 
 
+        </article>
+
+        <h2>2 Netzwerke</h2>
+        <article>
+            <hgroup>
+                <h4>Wasser vs. tCr</h4>
+                <p>Netzwerke aus den Aachener Daten. </p>
+            </hgroup>
+  
+            <div class="grid">
+                <div >
+                    <h5> tCr Original</h5>                    
+                    <a href="results/networx/tCr/V1_net.svg"><img src="results/networx/tCr/V1_net.svg" alt="Ergebnis 2"></a>
+                </div>
+                <div >
+                    <h5> tCr Extended</h5>
+                    <a href="results/networx/water/WANTED_net.svg"><img src="results/networx/water/WANTED_net.svg" alt="Ergebnis 1"></a>
+                </div>                                               
+            </div>            
+        </article>
+        <article>
+            <hgroup>
+                <h4>Wasser vs. tCr</h4>
+                <p>Netzwerke aus den Aachener Daten. </p>
+            </hgroup>
+            
+       
+            <div class="grid">
+                <div >
+                    <h5> tCr </h5>                    
+                    <a href="results/networx/tCr/WANTED_net.svg"><img src="results/networx/tCr/WANTED_net.svg" alt="Ergebnis 2"></a>
+                </div>
+                <div >
+                    <h5> Wasser </h5>
+                    <a href="results/networx/water/WANTED_net.svg"><img src="results/networx/water/WANTED_net.svg" alt="Ergebnis 1"></a>
+                </div>                                               
+            </div>            
+        </article>
+        <article>            
+            <hgroup>
+                <h4>Einfluss von GM</h4>
+                <p>Netzwerke aus den Aachener Daten mit unserem ursprünglichen Metaboliten Set. </p>
+            </hgroup>            
+            
+            <!-- <ul>                               
+               <li>Der Vergleich Wasser vs. für Wasser für GM korrigiert ist auch hier stabil. </li>
+               <li>Die Werte der stärksten Verbindungen sind insgesamt harmonischer da die Korrelation zwischen GABA und Glu auf das Level der anderen runtergeht und nicht mehr so heraussticht (0.49->0.37). </li>
+               <li>Die Verbindung von NAA zu Gln jetzt circa -0.2 verglichen zu -0.28 in unkorrigiert und -0.1 in tCr. </li>                           
+            </ul> -->
+            <div class="grid">
+                <div >
+                    <h5> tCr </h5>                    
+                    <a href="results/networx/tCr/WANTED_net.svg"><img src="results/networx/tCr/WANTED_net.svg" alt="Ergebnis 2"></a>
+                </div>
+                <div >
+                    <h5> tCr (gm-korrigiert) </h5>
+                    <a href="results/networx/tCr-GM/WANTED_net.svg" class="gallery"><img src="results/networx/tCr-GM/WANTED_net.svg" alt="Ergebnis 1"></a>
+                </div>                
+            </div>
         </article>
 
         <h2>4 Network Extended</h2>
@@ -162,60 +144,50 @@
             
             <div class="grid">
                 <div>
-                    <h5>Original</h5>
-                    <a href="results/v1/wasser-relax.svg"><img src="results/v1/wasser-relax.svg" alt="Ergebnis 1"></a>
+                    <h5>TIER 1 tCr</h5>
+                    <a href="results/networx/tCr/TIER1_net.svg"><img src="results/networx/tCr/TIER1_net.svg"alt="Ergebnis 1"></a>
                 </div>              
                 <div >                
-                    <h5>Extended</h5>            
-                    <a href="results/networx/water_relax-WANTED_net.svg"><img src="results/networx/water_relax-WANTED_net.svg" alt="Ergebnis 1"></a>
+                    <h5>TIER 1 Water</h5>            
+                    <a href="results/networx/water/TIER1_net.svg"><img src="results/networx/water/TIER1_net.svg" alt="Ergebnis 1"></a>
                 </div>            
             </div>  
-        </article>
-
-        <h2>5 Networks TIER 1-4</h2>        
-        <article>                   
-             <hgroup>
-                <h4>Netzwerk Analyse in den Subgruppen</h4>
-                <p>Erstaunlich stabil.</p>
-            </hgroup>
-            <div class="grid">    
-                <div>
-                    <h5>TIER 1 - Reliable</h5>
-                    <a href="results/networx/TIER1.svg"><img src="results/networx/TIER1.svg" alt="Ergebnis 1"></a>
-                </div>              
-                <div >                
-                    <h5>TIER 2 - Moderate</h5>
-                    <a href="results/networx/TIER2.svg"><img src="results/networx/TIER2.svg" alt="Ergebnis 1"></a>
-                </div>              
-            </div>
-            <div class="grid mt">
-                <div >                
-                    <h5>TIER 3 - Critical</h5>
-                    <a href="results/networx/TIER3.svg"><img src="results/networx/TIER3.svg" alt="Ergebnis 1"></a>
-                </div>                              
-                <div >              
-                    <h5>TIER 4 - Advanced</h5>  
-                    <p>Nicht genug Metabolit Werte</p>
-                </div>              
-            </div>
-        </article>
-
-        <h2>6 Metabolite Ratios Extended Metabolite Set</h2>
-        <article>
-             <h4>Extended Metaboliten Set</h4>
-             <ul>
-                <li>NAAG ist sehr hoch bei den Ratten (wieso??)</li>
-            </ul>
-            
             <div class="grid">
                 <div>
-                    <h5>Original</h5>
-                    <a href="results/v1/heatmaps_V1.svg"><img src="results/v1/heatmaps_V1.svg" alt="Ergebnis 1"></a>
+                    <h5>TIER 2 tCr</h5>
+                    <a href="results/networx/tCr/TIER2_net.svg"><img src="results/networx/tCr/TIER2_net.svg"alt="Ergebnis 1"></a>
                 </div>              
+                <div >                
+                    <h5>TIER 2 Water</h5>            
+                    <a href="results/networx/water/TIER2_net.svg"><img src="results/networx/water/TIER2_net.svg" alt="Ergebnis 1"></a>
+                </div>            
+            </div>
+            <div class="grid">
+                <div>
+                    <h5>TIER 3 tCr</h5>
+                    <a href="results/networx/tCr/TIER3_net.svg"><img src="results/networx/tCr/TIER3_net.svg"alt="Ergebnis 1"></a>
+                </div>              
+                <div >                
+                    <h5>TIER 3 Water</h5>            
+                    <a href="results/networx/water/TIER3_net.svg"><img src="results/networx/water/TIER3_net.svg" alt="Ergebnis 1"></a>
+                </div>            
+            </div>          
+            
+        </article>
+
+
+        <h2>6 Metabolite Ratios Extended Metabolite Set</h2>
+        <article>             
+            
+            <div class="grid">                              
                 <div >                
                     <h5>Extended</h5>            
                     <a href="results/ratios/heatmaps_WANTED.svg"><img src="results/ratios/heatmaps_WANTED.svg" alt="Ergebnis 1"></a>
-                </div>            
+                </div>        
+                <div >                
+                    <h5>3T Subset</h5>            
+                    <a href="results/ratios/heatmaps_TT.svg"><img src="results/ratios/heatmaps_TT.svg" alt="Ergebnis 1"></a>
+                </div> 
             </div>  
         </article>
 
@@ -229,21 +201,33 @@
                 <div >                
                     <h5>TIER 2 - Moderate</h5>
                     <a href="results/ratios/heatmaps_TIER2.svg"><img src="results/ratios/heatmaps_TIER2.svg" alt="Ergebnis 1"></a>
-                </div>              
-            </div>
-            <div class="grid mt">
+                </div>                  
+
                 <div >                
                     <h5>TIER 3 - Critical</h5>
                     <a href="results/ratios/heatmaps_TIER3.svg"><img src="results/ratios/heatmaps_TIER3.svg" alt="Ergebnis 1"></a>
                 </div>                              
-                <div >              
-                    <h5>TIER 4 - Advanced</h5>  
-                    <a href="results/ratios/heatmaps_TIER4.svg"><img src="results/ratios/heatmaps_TIER4.svg" alt="Ergebnis 1"></a>
+                  
+            </div>
+        </article>
+
+
+        <h2>Differences</h2>
+        <article>                         
+            <div class="grid">    
+                <div>
+                    <h5>7T and above<h5>
+                    <a href="results/ratios/heatmap_diff_WANTEDref.png"><img src="results/ratios/heatmap_diff_WANTEDref.png" alt="Ergebnis 1"></a>
                 </div>              
+                <div >                
+                    <h5>3T subet</h5>
+                    <a href="results/ratios/heatmap_diff_TTref.png"><img src="results/ratios/heatmap_diff_TTref.png" alt="Ergebnis 1"></a>
+                </div>                                                 
+                  
             </div>
         </article>
         
-        <!-- <h2>Statistik Analyse</h2>
+        <h2>Statistik Analyse</h2>
         <article>    
             <hgroup>
                 <h4>Interventionseffekte</h4>
@@ -252,32 +236,17 @@
                   
             <div class="grid">
               <div> 
-                    <h5>Extended Set tCr</h5>        
-                    <a href="results/tCr_V1.png"><img src="results/tCr_V1.png" alt="Ergebnis 1"></a>
+                    <h5>V1</h5>        
+                    <a href="results/pcc_val_tCr-v1_V1.png"><img src="results/pcc_val_tCr-v1_V1.png" alt="Ergebnis 1"></a>
                 </div>
                 <div> 
-                    <h5>Extended Set Wasser</h5>        
-                    <a href="results/water_V1.png"><img src="results/water_V1.png" alt="Ergebnis 1"></a>
+                    <h5>Extended</h5>        
+                    <a href="results/pcc_val_tCr-v1_WANTED.png"><img src="results/pcc_val_tCr-v1_WANTED.png" alt="Ergebnis 1"></a>
                 </div>
             </div>
 
-                 <div class="grid mt">
-                <div> 
-                    <h5>Extended Set tCr</h5>        
-                    <a href="results/tCr_WANTED.png"><img src="results/tCr_WANTED.png" alt="Ergebnis 1"></a>
-                </div>
-                <div> 
-                    <h5>Extended Set Wasser</h5>        
-                    <a href="results/water_WANTED.png"><img src="results/water_WANTED.png" alt="Ergebnis 1"></a>
-                </div>
-            </div>
-              
-              
-     
-                  
-       
-            </div>
-        </article>       -->
+                
+        </article>      
 
 
     </main>
