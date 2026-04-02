@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forschungsergebnisse</title>
+    
+    <!-- Pico CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+    
+    <!-- SimpleLightbox CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simplelightbox/2.14.2/simple-lightbox.min.css">
+
+    <style type="text/css">
+
+        ul.no-margin p{
+            margin-bottom: 0.05rem;
+        }
+        .mt{
+            margin-top: 2.5rem;
+        }
+        h5{
+            text-align: center;
+        }
+    </style>
+
+    <!-- SimpleLightbox JS
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/simplelightbox/2.14.2/simple-lightbox.min.js"></script>    
+    <script>    
+        new SimpleLightbox('.gallery', {/* Optionen */});
+    </script> -->
+</head>
+<body>
+    <main class="container">
+        <h1>Nature Communications Revision</h1>
+            
+
+
+        <h2>1 MRS</h2>
+        <article>
+            <!-- <hgroup>
+                <h4>Metabolites?</h4>
+                <p>Usprüngliches Set war inspiriert aus dem Hintergrund der Fasting-Studie (7T Validation aus Jena) </p>
+            </hgroup>         -->
+
+            <div>
+                <h6>Reliability</h6>                
+                <ul class="no-margin">
+                    <li><p><strong>TIER 1 - Reliable:</strong> NAA, tCr, Glu, Ins, tCho, tNAA</p></li>
+                    <li><p><strong>TIER 2 - Moderate:</strong> Gln, NAAG, GSH, Tau, sI, Asp</p></li>
+                    <li><p><strong>TIER 3 - Critical:</strong> PCh, GPC, GABA, Lac</p></li>
+                    <li><p></p><strong>TIER 4 - Advanced:</strong> Ala, Asc, PE, Glc</p></li>                                
+                </ul>
+            </div>
+                
+            <h6>Metabolite Set: NAA, tCr, Glu, Ins, tCho, Gln, NAAG, GSH, Tau, Asp, GABA, Lac</h6>                              
+        </article>
+
+        <h2>2 Network</h2>
+        <article>
+            <hgroup>
+                <h4>Metabolite Network</h4>
+                <p>Co-occurrence of metabolites </p>
+            </hgroup>    
+            <div>
+                <h5>Network</h5>
+                <a href="results/networx/tCr/WANTED_net.svg"><img src="results/networx/tCr/WANTED_net.svg" alt="Ergebnis 1"></a>
+            </div>                                               
+             
+        </article>
+        <article>
+            <hgroup>
+                <h4>Water vs. tCr</h4>
+                <!-- <p>Netzwerke aus den Aachener Daten. </p> -->
+            </hgroup>
+            
+       
+            <div class="grid">
+                <div >
+                    <h5> tCr </h5>                    
+                    <a href="results/networx/tCr/WANTED_net.svg"><img src="results/networx/tCr/WANTED_net.svg" alt="Ergebnis 2"></a>
+                </div>
+                <div >
+                    <h5> Water </h5>
+                    <a href="results/networx/water/WANTED_net.svg"><img src="results/networx/water/WANTED_net.svg" alt="Ergebnis 1"></a>
+                </div>                                               
+            </div>            
+        </article>
+       
+
+        <h2>3 Metabolite Ratios</h2>
+        <article>             
+            <div>
+                <a href="results/paper_plot.svg"><img src="results/paper_plot.svg" alt="Ergebnis 1"></a>
+            </div>        
+       
+        </article>
+        
+        <h2>4 Statistical Analysis</h2>
+        <article>    
+            <hgroup>
+                <h4>Effect of interventions</h4>                
+            </hgroup>                     
+                  
+            <div class="grid">
+              <div> 
+                    <h5>3T</h5>        
+                    <a href="results/pcc_val_tCr-v1_TT.png"><img src="results/pcc_val_tCr-v1_TT.png" alt="Ergebnis 1"></a>
+                </div>
+                <div> 
+                    <h5>Extended</h5>        
+                    <a href="results/pcc_val_tCr-v1_WANTED.png"><img src="results/pcc_val_tCr-v1_WANTED.png" alt="Ergebnis 1"></a>
+                </div>
+            </div>
+
+                
+        </article>      
+
+
+    </main>
+
+
+</body>
+</html>
